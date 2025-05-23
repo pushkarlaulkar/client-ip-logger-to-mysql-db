@@ -14,11 +14,11 @@ Instructions to deploy **Client IP Logger in MySQL DB** on AWS EKS Auto Mode
         --set auth.replicationPassword= \
         --set primary.persistence.enabled=true \
         --set primary.persistence.size=8Gi \
-        --set primary.persistence.storageClass=ebs-sc \
+        --set primary.persistence.storageClass=aws-ebs \
         --set secondary.replicaCount=2 \
         --set secondary.persistence.enabled=true \
         --set secondary.persistence.size=8Gi \
-        --set secondary.persistence.storageClass=ebs-sc \
+        --set secondary.persistence.storageClass=aws-ebs \
         --set volumePermissions.enabled=true
      ```
   3. Create the Table in MySQL which will store the Client IP
